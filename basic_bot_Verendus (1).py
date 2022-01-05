@@ -426,4 +426,4 @@ async def my_background_task():
 			await asyncio.sleep(60)
 
 #bot.loop.create_task(my_background_task())
-bot.run('ODQyNzk5NzE0MTcxNzQ4Mzky.YJ6kZg.-Gx0oqrVz-o3MlHVcQGuVIayUpU')
+bot.run('bottoken')
