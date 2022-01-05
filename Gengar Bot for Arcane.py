@@ -20,11 +20,11 @@ from apiclient import discovery
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 APPLICATION_NAME = 'Google Sheets API Python Quickstart'
 
-spreadsheetId = '1lWFK4J5S1-e8_MEeLrx4uJupetOcageegpa_okU4lbQ'
-rangeName = 'Sheet1!B4:D'
-listchannelid = 849293459747766282
-attchannelid = 848628488517058590
-guildid = 836396627300057098
+spreadsheetId = 'Spreadsheetid'
+rangeName = 'Sheet!A:D'
+listchannelid = 0
+attchannelid = 0
+guildid = 0
 
 
 def get_credentials():
@@ -283,7 +283,7 @@ async def UpdateList(ctx):
 	await channel.send(embed=Gembed2)
 	
 
-@bot.command(pass_context=True, description='Set attendance for WoE, using !setatt2 yes/no <yourrole>')
+@bot.command(pass_context=True, description='Set attendance for WoE, using !setatt yes/no <yourrole>')
 @commands.has_role("Core")	
 async def setatt(ctx, *char : str):
 	"""Set your presence status on the sheet."""
@@ -408,7 +408,7 @@ async def woe(ctx):
 
 async def my_background_task():
 	await bot.wait_until_ready()
-	channel = bot.get_channel(840417972618395668)
+	channel = bot.get_channel(0)
 	while True:
 		agora = datetime.now()
 		agora = agora - timedelta(hours = 3)
@@ -416,7 +416,7 @@ async def my_background_task():
 		m = agora.minute
 		if(h == 11 or h == 16 or h == 22 or h == 4):
 			if(m == 25):
-				await channel.send("<@&915644510996930681> Snowball event starting in 5 minutes!")
+				await channel.send("<@&0> Snowball event starting in 5 minutes!")
 				#embed = discord.Embed(title="Snowball Event:", description="<@&915644510996930681> Snowball Event is starting in 5 minutes!", color=0xFF83FA)
 				#await channel.send(embed=embed)
 				await asyncio.sleep(17700)
